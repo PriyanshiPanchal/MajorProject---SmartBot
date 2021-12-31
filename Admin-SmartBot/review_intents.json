@@ -1,0 +1,400 @@
+[
+    {
+        "_id":"5eb06422e987636d9f9aed2a",
+        "intents":[
+            {
+                "tag":"noanswer",
+                "patterns":[
+                    ""
+                ],
+                "responses":[
+                    "Sorry, can't understand you",
+                    "Please give me more info"
+                ],
+                "context":[
+                    ""
+                ]
+            },
+            {
+                "tag":"welcome",
+                "patterns":[
+                    "Hi there",
+                    "Welcome",
+                    "Helloooooooo",
+                    "heeello",
+                    "Greetings",
+                    "Hey bot",
+                    "Hello my friend",
+                    "Hi dude",
+                    "Boot Up",
+                    "helo",
+                    "Ciao",
+                    "good morning smartbot",
+                    "hey you",
+                    "helllloooo",
+                    "begin",
+                    "/start",
+                    "Howdie",
+                    "aloha",
+                    "Yup",
+                    "Hello SmartBot",
+                    "Yoooo",
+                    "Morning!",
+                    "Hi bot",
+                    "Hello my friend",
+                    "Greetings",
+                    "Why hello there",
+                    "Howdy",
+                    "mornin' mister",
+                    "Hello there!",
+                    "goodmorning!",
+                    "Welcome",
+                    "Hello you!",
+                    "Yo",
+                    "Hello, good afternoon!",
+                    "good afternoon!",
+                    "Let's Start",
+                    "hi bot",
+                    "heelloo",
+                    "h3ll0",
+                    "heyy",
+                    "heyo",
+                    "Hola",
+                    "Aloa",
+                    "hiii",
+                    "hii",
+                    "hi",
+                    "Good Morning",
+                    "GM",
+                    "Gud Mrng",
+                    "Good Mrng",
+                    "Good Afternoon",
+                    "Gud Noon",
+                    "Gud Afternoon",
+                    "Good Evening",
+                    "Evening",
+                    "Morning",
+                    "Gud Evening",
+                    "Good Eve",
+                    "How are you",
+                    "Is anyone there?",
+                    "Hey",
+                    "Hola",
+                    "Hello",
+                    "Good day",
+                    "Good",
+                    "Morning"
+                ],
+                "responses":[
+                    "Hi there, how can I help you? We are providing services of booking appointment, buying medicines and also various types of home services like physiotherapy, care giver and medical tests",
+                    "Hello Dear! How can I help you?"
+                ],
+                "context":[
+                    ""
+                ]
+            },
+            {
+                "tag":"goodbye",
+                "patterns":[
+                    "Bye",
+                    "By",
+                    "See you later",
+                    "Goodbye",
+                    "Nice chatting to you, bye",
+                    "Till next time",
+                    "Good Night",
+                    "Gud Night",
+                    "Night"
+                ],
+                "responses":[
+                    "See you!",
+                    "Have a nice day",
+                    "Bye! Come back again soon."
+                ],
+                "context":[
+                    ""
+                ]
+            },
+            {
+                "tag":"thanks",
+                "patterns":[
+                    "Thanks",
+                    "Thank you",
+                    "That's helpful",
+                    "Awesome, thanks",
+                    "Thanks for helping me",
+                    "Happy to help you"
+                ],
+                "responses":[
+                    "Happy to help!",
+                    "Any time!",
+                    "My pleasure"
+                ],
+                "context":[
+                    ""
+                ]
+            },
+            {
+                "tag":"bad_words",
+                "patterns":[
+                    "bitch",
+                    "bc",
+                    "mc",
+                    "fuck off",
+                    "get lost you asshole",
+                    "asshole",
+                    "chutiya",
+                    "fuck you bitch"
+                ],
+                "responses":[
+                    "I prefer not to respond to this. I am still here to help you. Please ask the relevant question."
+                ],
+                "context":[]
+            },
+            {
+                "tag":"book_appointment",
+                "patterns":[
+                    "I want to book a appointment",
+                    "Can I book an appointment",
+                    "Can you check for my appointment confirmation",
+                    "When is the next date available for appointment",
+                    "I would like to book appointment",
+                    "What are the steps for booking an appointment"
+                ],
+                "responses":[
+                    " As here we provide the facility of booking appointments online. Here are the few steps you need to follow to book your appointment online. \n Step 1: Visit the official website to book appointment. Please Click Here \n Step 2: Verify yourself using Mobile No. \n Step 3: Choose Department in which you want treatment. \n Step 4: Select date of appointment. \n Step 5: Verify yourself using Aadhar Card Number \n Step 6: Get Confirmation Code"
+                ],
+                "context":[
+                    ""
+                ]
+            },
+            {
+                "tag":"buy_medicines",
+                "patterns":[
+                    "I would like to buy medicines",
+                    "I want to buy medicines",
+                    "I want to purchase medicines",
+                    "Which medicines are available in stock for purchase"
+                ],
+                "responses":[
+                    "For buying medicines online following are the steps you need to follow. \n Step 1: If you are first time user-Download the app and sign-up. If not, then log-in. \n Step 2: Upload the prescription and write the name and quantity of each medicines you require if not same as in prescription. \n Step 3: Check your cart and verify the address. \n Step 4: Select the mode of payment and click submit button."
+                ],
+                "context":[
+                    ""
+                ]
+            },
+            {
+                "tag":"deliver_medicines",
+                "patterns":[
+                    "Will you deliver medicines at home",
+                    "Are the medicines be deliverd at home",
+                    "Will you deliver medicine to my home safely",
+                    "What will be the delivery of medicines charges?",
+                    "Are there any charges for delivery"
+                ],
+                "responses":[
+                    "For buying medicines online following are the steps you need to follow. \n Step 1: If you are first time user-Download the app and sign-up. If not, then log-in. \n Step 2: Upload the prescription and write the name and quantity of each medicines you require if not same as in prescription. \n Step 3: Check your cart and verify the address. \n Step 4: Select the mode of payment and click submit button"
+                ],
+                "context":[
+                    ""
+                ]
+            },
+            {
+                "tag":"home_services",
+                "patterns":[
+                    "What type of services you provide at home?",
+                    "I would like to know about home services"
+                ],
+                "responses":[
+                    "Physiotherapy, Care Giver, Medical Test"
+                ],
+                "context":[]
+            },
+            {
+                "tag":"options",
+                "patterns":[
+                    "How you could help me?",
+                    "What you can do?",
+                    "What help you provide?",
+                    "How you can be helpful?",
+                    "What support is offered"
+                ],
+                "responses":[
+                    "The services provided by our hospital are \n 1. Book Appointment \n 2. Home servies \n 3. Buy Medicines"
+                ],
+                "context":[
+                    ""
+                ]
+            },
+            {
+                "tag":"adverse_drug",
+                "patterns":[
+                    "How to check Adverse drug reaction?",
+                    "Open adverse drugs module",
+                    "Give me a list of drugs causing adverse behavior",
+                    "List all drugs suitable for patient with adverse reaction",
+                    "Which drugs dont have adverse reaction?"
+                ],
+                "responses":[
+                    "Navigating to Adverse drug reaction module"
+                ],
+                "context":[
+                    ""
+                ]
+            },
+            {
+                "tag":"blood_pressure",
+                "patterns":[
+                    "Open blood pressure module",
+                    "Task related to blood pressure",
+                    "Blood pressure data entry",
+                    "I want to log blood pressure results",
+                    "Blood pressure data management"
+                ],
+                "responses":[
+                    "Navigating to Blood Pressure module"
+                ],
+                "context":[
+                    ""
+                ]
+            },
+            {
+                "tag":"blood_pressure_search",
+                "patterns":[
+                    "I want to search for blood pressure result history",
+                    "Blood pressure for patient",
+                    "Load patient blood pressure result",
+                    "Show blood pressure results for patient",
+                    "Find blood pressure results by ID"
+                ],
+                "responses":[
+                    "Please provide Patient ID",
+                    "Patient ID?"
+                ],
+                "context":[
+                    "search_blood_pressure_by_patient_id"
+                ]
+            },
+            {
+                "tag":"search_blood_pressure_by_patient_id",
+                "patterns":[],
+                "responses":[
+                    "Loading Blood pressure result for Patient"
+                ],
+                "context":[
+                    ""
+                ]
+            },
+            {
+                "tag":"pharmacy_search",
+                "patterns":[
+                    "Find me a pharmacy",
+                    "Find pharmacy",
+                    "List of pharmacies nearby",
+                    "Locate pharmacy",
+                    "Search pharmacy"
+                ],
+                "responses":[
+                    "Please provide pharmacy name"
+                ],
+                "context":[
+                    "search_pharmacy_by_name"
+                ]
+            },
+            {
+                "tag":"search_pharmacy_by_name",
+                "patterns":[],
+                "responses":[
+                    "Loading pharmacy details"
+                ],
+                "context":[
+                    ""
+                ]
+            },
+            {
+                "tag":"hospital_search",
+                "patterns":[
+                    "Lookup for hospital",
+                    "Searching for hospital to transfer patient",
+                    "I want to search hospital data",
+                    "Hospital lookup for patient",
+                    "Looking up hospital details"
+                ],
+                "responses":[
+                    "Please provide hospital name or location"
+                ],
+                "context":[
+                    "search_hospital_by_params"
+                ]
+            },
+            {
+                "tag":"search_hospital_by_params",
+                "patterns":[],
+                "responses":[
+                    "Please provide hospital type"
+                ],
+                "context":[
+                    "search_hospital_by_type"
+                ]
+            },
+            {
+                "tag":"search_hospital_by_type",
+                "patterns":[],
+                "responses":[
+                    "Loading hospital details"
+                ],
+                "context":[
+                    ""
+                ]
+            },
+            {
+                "tag":"age",
+                "patterns":[
+                    "how old",
+                    "how old is smartbot",
+                    "what is your age",
+                    "how old are you",
+                    "age?"
+                ],
+                "responses":[
+                    "I am 18 years old!",
+                    "18 years young!"
+                ],
+                "context_set":[
+                    ""
+                ]
+            },
+            {
+                "tag":"name",
+                "patterns":[
+                    "what is your name",
+                    "what should I call you",
+                    "whats your name?",
+                    "Who are you?"
+                ],
+                "responses":[
+                    "You can call me SmartBot.",
+                    "I'm SmartBot!",
+                    "I'm SmartBot aka Tech With Bot."
+                ],
+                "context_set":[
+                    ""
+                ]
+            },
+            {
+                "tag":"hours",
+                "patterns":[
+                    "when are you guys open",
+                    "what are your hours",
+                    "hours of operation"
+                ],
+                "responses":[
+                    "We are open 9am-7pm Monday-Saturday!"
+                ],
+                "context_set":[
+                    ""
+                ]
+            }
+        ]
+    }
+]

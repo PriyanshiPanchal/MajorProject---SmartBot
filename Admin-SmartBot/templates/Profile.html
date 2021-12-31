@@ -1,0 +1,126 @@
+{% extends "layout.html" %}
+{% block body %}
+	<nav id="sidebar">
+		<div class="sidebar-header">
+			<span class="input-group" id="smartbot">
+				<p><img src={{url_for('static',filename='images/Robot.svg')}} id="robot-logo"></img>SmartBot</p>						
+			</span>
+			<!-- <a class="logo" href="Thewa.html"> -->
+					<!--  <img src="images/logo.png" alt="Thewa"></img>background-image: url(https://image.flaticon.com/icons/svg/327/327779.svg) --> 
+				<!-- <img src="images/Robot.svg" alt="Thewa" id="robot-logo"></img> -->
+			<!-- </a> -->
+		</div>	
+		<div class="row" id="list-content">
+			<ul class="list">
+				<li class="list-group-btn"><a href="{{url_for('upload')}}"><i class="fa fa-upload icon" aria-hidden="true"></i>Uploads</a></li>
+					<li class="list-group-btn"><a href="{{ url_for('show_data')}}"><i class="fa fa-database icon" aria-hidden="true"></i>Show Data</a></li>
+					<li class="list-group-btn"><a href="{{ url_for('delete')}}"><i class="fa fa-trash-o icon" aria-hidden="true"></i>Delete</a></li>
+					<li class="list-group-btn"><a href="{{url_for('records')}}"><i class="fa fa-bar-chart icon" aria-hidden="true"></i>Records</a></li>
+					<li class="list-group-btn active"><a href="{{ url_for('profile')}}"><i class="fa fa-user icon" aria-hidden="true"></i>Profile</a></li>
+					<!-- <li class="list-group-btn"><a href="Contact.html"><i class="fa fa-phone-square icon" aria-hidden="true"></i>Contact</a></li> -->
+					<!-- <li class="list-group-btn"><a href="Shipping.html"><i class="fa fa-truck icon" aria-hidden="true"></i>Shipping</a></li> -->
+					<li class="list-group-btn">
+						<a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><i class="fa fa-cog icon" aria-hidden="true"></i>General Settings<span><i class="fa fa-caret-down" aria-hidden="true" id="dropdownicon"></i></span></a>
+						<ul class="collapse list-unstyled" id="homeSubmenu">
+							<li>
+								<a href="#">Company Profile</a>
+							</li>
+							<li>
+								<a href="#">Change Password</a>
+							</li>
+							<li>
+								<a href="#">SMTP Email Settings</a>
+							</li>
+							<li>
+								<a href="#">Log Out</a>
+							</li>
+						</ul>
+					</li>
+					<li class="list-group-btn"><a href="#"><i class="fa fa-question-circle icon" aria-hidden="true"></i>Help</a></li>
+			</ul>
+		</div>
+	</nav>
+	<div id="content">
+		<div class="col-sm-12">
+			<div class="row">
+				<div class="col-sm-5 sidenav">
+						<button type="button" id="sidebarCollapse" class="btn btn-light">
+							<span></span>
+							<span></span>
+							<span></span>
+						</button>	
+				</div>
+				<div class="col-sm-7">
+						<div class="form-group" id="logout">
+							<form action="{{url_for('logout')}}" method=POST>
+								<button type="submit" class="btn-category" id="button-logout"data-target="#search-form" name="q">Log Out</button>
+							</form>
+						</div>
+						<div class="account">
+							<button type="button" class="btn search-btn dropdown-toggle" data-target="#search-form" data-toggle="dropdown" name="q">
+									<i class="fa fa-user w3-jumbo icon" aria-hidden="true"></i>
+							</button>
+						</div>
+						<div class="form-group" id="username">
+							<p>You are logged in as {{username}}</p>
+						</div>
+				</div>
+			</div>
+			<div class="row" id="blankdiv">
+				<div class="row-upload" id="upload-file">
+					<p>Profile</p>
+				</div>
+				<div class="row" id="div-profile-form">
+					<form action="/profile_update" method=POST enctype="multipart/form-data">
+						<div class="form-group">
+							<label for="name">Enter Name:</label>
+							<input type="text" class="form-control" id="text-name" name="name" value={{name}} required>
+						</div>
+						<div class="form-group">
+							<label for="password">Password:</label>
+							<input type="password" class="form-control" id="text-pswd" name="pswd" value={{password}} required>
+						</div>
+						<div class="form-group">
+							<label for="mobile">Mobile  No:</label>
+							<input type="text" class="form-control" id="text-mobile" name="mobile" value={{mobile}} required>
+						</div>
+						<div class="form-group">
+							<label for="">City:</label>
+							<input type="text" class="form-control" id="text-city" name="city" value={{city}} required>
+						</div>
+						<button type="submit" class="btn btn-category" id="btn-submit">Submit</button>
+					</form>
+				</div>
+				<div style="margin-top: 10px; font-size: 18px; color: red; text-align: center; margin-left: 40px;">
+					{% with messages = get_flashed_messages() %}  
+						{% if messages %}  
+							{% for message in messages %}  
+								<p>{{message}}</p>  
+							{% endfor %}  
+						{% endif %}  
+					{% endwith %}
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-sm-12">
+					<footer>
+						<div class="col-sm-7">
+								<div class="page-footer">
+										<p>Copyright © 2019-Thewa-All Rights Reserved</p> 
+								</div>
+						</div>
+						<div class="col-sm-5">
+							<div class="footer">
+								<span class="input-group-addon" id="designed">
+									<p>Designed by
+									<img src={{url_for('static',filename='images/V-logo.png')}}>
+									Vethics</p>										
+								</span>
+							</div>
+						</div>
+					</footer>
+				</div>
+			</div>
+		</div>
+	</div>
+{% endblock %}

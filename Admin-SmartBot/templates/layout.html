@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>SmartBot Admin</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdn.datatables.net/1.10.20/css/dataTables.bootstrap.min.css">
+  <link rel="stylesheet" href="{{url_for('static',filename='css/sb-admin.css')}}">
+  <link rel="stylesheet" href="{{url_for('static',filename='css/font-awesome.css')}}">
+  
+</head>
+<body class="animation">
+    <div class="wrapper">
+        {% block body %}{% endblock %}
+    </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.20/js/dataTables.bootstrap.min.js"></script>
+    <script src={{url_for('static',filename='js/Thewa_Script.js')}}></script>
+    <script>
+        function download(file, text) { 
+
+            //creating an invisible element 
+            var element = document.createElement('a'); 
+            element.setAttribute('href', 'data:application/json;charset=utf-8, ' 
+                                + encodeURIComponent(text)); 
+            element.setAttribute('download', file); 
+
+            //the above code is equivalent to 
+            // <a href="path of file" download="file name"> 
+
+            document.body.appendChild(element); 
+
+            //onClick property 
+            element.click(); 
+
+            document.body.removeChild(element); 
+        } 
+
+        // Start file download. 
+        document.getElementById("btn-download").addEventListener("click", function() { 
+            // Generate download of hello.txt file with some content 
+            var text = document.getElementById("comment").value; 
+            var filename = "intents.json"; 
+
+            download(filename, text); 
+        }, false);
+        
+	</script>
+</body>
+</html>
